@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&family=Inter:wght@300;400&family=Work+Sans:wght@300;400;500&display=swap");
+@import "reset.css";
+@import "variables.css";
+
+/* screens */
+@import "screens/index.css";
+/* components */
+@import "components/platform-bar.css";
+@import "components/screen-header.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) and (orientation: landscape) {
+  .main-screen,
+  .platform-bar,
+  .screen-header {
+    width: 1370px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1439px) and (orientation: landscape) {
+  .main-screen,
+  .platform-bar,
+  .screen-header {
+    width: 1140px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
+  .main-screen,
+  .platform-bar,
+  .screen-header {
+    width: 908px;
+  }
+}
+@media screen and (min-width: 764px) and (max-width: 991px) and (orientation: landscape) {
+  .main-screen,
+  .platform-bar,
+  .screen-header {
+    width: 680px;
+  }
+}
+@media screen and (min-width: 572px) and (max-width: 764px) and (orientation: landscape) {
+  .main-screen,
+  .platform-bar,
+  .screen-header {
+    width: 544px;
+  }
+}
+@media screen and (max-width: 534px) and (orientation: landscape) {
+  .main-screen,
+  .platform-bar,
+  .screen-header {
+    width: 100%;
+  }
+}
+
+/* padding:
+padding 값이 이하 몇 단계의 화면 width 크기값에 맞춰 변화한다
+    1. 1440~ 
+    2. 1200~1440 
+    3. 992~1200
+    4. 764~992
+    5. 572~764
+문제: padding 값이 이 단계 내에서도 25~125px 사이에서 줄었다 늘었다 하는 걸 어떻게 반영할까? 
+돌파구: padding을 줄 게 아니라 컨테이너의 사이즈를 맞춰야겠다. padding 값은 계속해서 변화하지만 컨테이너는 딱 5단계로 나뉘어서 5번만 변하기 때문. 
+*/
