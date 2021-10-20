@@ -82,7 +82,64 @@
 
     <main class="main-screen">
       <div class="main-screen__section">
-        <img class ="main-banner" src="main-banner_1.png"/>
+        <div class="main-banner">
+          <div class="main-banner__column">
+            <div class="main-banner__img">
+              <img src="images/main-banner(1370px).png" style="width:100%">
+             </div>
+             <div class="main-banner__img">
+               <img src="images/main-banner-02(1370px).png" style="width:100%">
+             </div>
+             <div class="main-banner__img">
+               <img src="images/main-banner-03(1370px).png" style="width:100%">
+             </div>
+          </div>
+          <div class="main-banner__column">
+            <div class="main-banner__controller">
+              <div class="main-banner__info">1/3</div>
+            
+              <a class="Back" onclick="plusSlides(-1)"></a>
+              <a class="Pause" onclick="plusSlides(0)"></a>
+              <a class="Forward" onclick="plusSlides(1)"></a>
+             
+              <svg class="main-banner__navigation" onclick="currentSlide(1)"
+          xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+               <svg class="main-banner__navigation" onclick="currentSlide(2)" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+               </svg>
+               <svg class="main-banner__navigation" onclick="currentSlide(3)" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+               </svg>
+            </div>
+          </div>
+        </div>
+
+  
+        
+      
+      
+    
+
+      <!-- <picture>
+        <source srcset="images/main-banner(1370px).png 1240w 100%">
+        <source srcset="images/main-banner(1140px).png 1200w">
+        <source srcset="images/main-banner(908px).png 992w">
+        <source srcset="images/main-banner(680px).png 764w">
+        <img src="iimages/main-banner(544px).png" alt="main-banner" />
+    </picture>
+  -->
+         
+         
+       <!--  <source media="(min-width: 1240px)" srcset="images/main-banner(1370px).png">
+          <source media="(min-width: 1200px)" srcset="images/main-banner(1140px).png">
+          <source media="(min-width: 992px)" srcset="images/main-banner(908px).png">
+          <source media="(min-width: 764px)" srcset="images/main-banner(680px).png">
+          <source media="(min-width: 572px)" srcset="images/main-banner(544px).png">
+          <img src="images/main-banner(544px).png" alt="main-banner" style="width:auto">
+        --> 
+        
       </div>
       <div class="main-screen__section"></div>
       <div class="main-screen__section"></div>
@@ -91,15 +148,19 @@
       <div class="main-screen__section"></div>
       <div class="main-screen__section"></div>
       <div class="main-screen__section"></div>
-      
+    
+      <!---
       <picture>
-        <source media="(max-width: 799px)" srcset="main-banner_2.png">
-        <source media="(min-width: 800px)" srcset="main-banner_2.png">
-        <img src="main-banner_2.png" alt="Chris standing up holding his daughter Elva">
+        <source media="(min-width: 1440px)" srcset="images/main-banner(1370px).png">
+        <source media="(min-width: 1200px)" srcset="images/main-banner(1140px).png">
+        <source media="(min-width: 992px)" srcset="images/main-banner(908px).png">
+        <source media="(min-width: 764px)" srcset="images/main-banner(680px).png">
+        <source media="(min-width: 572px)" srcset="images/main-banner(544px).png">
+        <img src="Profile_-_Dopey.png" alt="main-banner">
       </picture>
+->
 
-
-      <!--
+      
         1373*360px 
 
       -->
@@ -112,5 +173,6 @@
       src="https://kit.fontawesome.com/874cad8499.js"
       crossorigin="anonymous"
     ></script>
+    <script src="js/image-carousel.js"></script>
   </body>
 </html>
