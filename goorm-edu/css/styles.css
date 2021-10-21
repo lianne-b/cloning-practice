@@ -7,6 +7,7 @@
 /* components */
 @import "components/platform-bar.css";
 @import "components/screen-header.css";
+@import "components/main-banner.css";
 
 body {
   display: flex;
