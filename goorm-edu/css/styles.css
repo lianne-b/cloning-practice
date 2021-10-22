@@ -8,6 +8,7 @@
 @import "components/platform-bar.css";
 @import "components/screen-header.css";
 @import "components/main-banner.css";
+@import "components/main-card.css";
 
 body {
   display: flex;
