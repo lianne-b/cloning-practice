@@ -1,0 +1,54 @@
+.up-next {
+  margin: 10px 0;
+  padding: 0 20px;
+}
+
+.up-next > span {
+  font-size: 13px;
+  color: var(--sub-text-color);
+}
+
+.item img {
+  margin-top: 10px;
+  width: 40%;
+  flex: 1 1 35%;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.info {
+  margin-top: 7px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 60%;
+}
+
+.info .title {
+  margin-bottom: 5px;
+}
+
+.info .name,
+.views {
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--sub-text-color);
+}
+
+.moreBtn {
+  margin-top: 10px;
+  flex: 1 1 5%;
+}
+
+.title {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.profile-subscribe {
+  text-transform: uppercase;
+  color: rgb(230, 54, 54);
+}

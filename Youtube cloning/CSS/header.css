@@ -1,0 +1,7 @@
+.section-bar {
+  background-color: #252525;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  color: white;
+}
