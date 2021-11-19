@@ -3,5 +3,14 @@
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  color: white;
+  color: var(--white-color);
+}
+
+.section-bar__logo i {
+  color: var(--brand-color);
+}
+
+.section-bar__search i {
+  margin-left: 10px;
+  cursor: pointer;
 }

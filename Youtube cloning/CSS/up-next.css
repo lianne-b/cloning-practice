@@ -1,11 +1,12 @@
 .up-next {
   margin: 10px 0;
   padding: 0 20px;
+  flex: 1 50%;
 }
 
 .up-next > span {
-  font-size: 13px;
-  color: var(--sub-text-color);
+  font-size: var(--font-micro);
+  color: var(--dark-grey-color);
 }
 
 .item img {
@@ -33,9 +34,9 @@
 
 .info .name,
 .views {
-  font-size: 13px;
+  font-size: var(--font-small);
   line-height: 20px;
-  color: var(--sub-text-color);
+  color: var(--dark-grey-color);
 }
 
 .moreBtn {
@@ -44,11 +45,10 @@
 }
 
 .title {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: var(--font-medium);
 }
 
 .profile-subscribe {
   text-transform: uppercase;
-  color: rgb(230, 54, 54);
+  color: var(--brand-color);
 }
