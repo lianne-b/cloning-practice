@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600&display=swap");
+@import url("reset.css");
+
+body {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+.heading {
+  margin: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgb(45, 143, 255);
+  letter-spacing: 2px;
+}
+
+.canvas {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 6px 1px rgba(79, 146, 190, 0.151);
+}
+
+.controls {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls .controls__range {
+  margin-bottom: 20px;
+}
+
+.controls__colors {
+  display: flex;
+}
+
+.controls__colors .controls__color {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px 1px rgba(79, 146, 190, 0.151);
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.controls__colors .controls__color:active {
+}
+
+.controls .controls__btns {
+  margin-bottom: 25px;
+}
+
+.controls__btns button {
+  width: 60px;
+  margin: 0 10px;
+  background-color: rgb(45, 143, 255);
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 2px 2px 3px 1px rgba(79, 146, 190, 0.151);
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  cursor: pointer;
+}
