@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600&display=swap");
 @import url("reset.css");
 
+.remove {
+  display: none;
+}
+
 body {
   background-color: aliceblue;
   display: flex;
@@ -18,11 +22,38 @@ body {
   letter-spacing: 2px;
 }
 
+.main-contents {
+  display: flex;
+}
+
 .canvas {
   width: 500px;
   height: 500px;
   background-color: white;
   border-radius: 15px;
+  margin: 5px;
+  box-shadow: 2px 2px 6px 1px rgba(79, 146, 190, 0.151);
+}
+
+.given-img {
+  width: 500px;
+  height: 500px;
+  border-radius: 15px;
+  background-color: white;
+  margin: 5px;
+  box-shadow: 2px 2px 6px 1px rgba(79, 146, 190, 0.151);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: rgb(45, 143, 255);
+}
+
+.given-img img {
+  width: 500px;
+  height: 500px;
+  border-radius: 15px;
+  margin: 5px;
   box-shadow: 2px 2px 6px 1px rgba(79, 146, 190, 0.151);
 }
 

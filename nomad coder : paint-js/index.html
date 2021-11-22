@@ -10,7 +10,13 @@
   <body>
     <h1 class="heading">Welcome to Yen's Canvas</h1>
     <!-- will use classes for css / ids for js -->
-    <canvas class="canvas" id="jsCanvas"></canvas>
+
+    <section class="main-contents">
+      <canvas class="canvas" id="jsCanvas"></canvas>
+      <div class="given-img" id="jsImg">
+        <span class="given-img__description" id="jsSpan">클릭해보쇼</span>
+      </div>
+    </section>
 
     <div class="controls">
       <div class="controls__range">
@@ -72,5 +78,6 @@
     </div>
 
     <script src="app.js"></script>
+    <script src="img.js"></script>
   </body>
 </html>
