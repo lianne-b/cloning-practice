@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Paint JS</title>
+  </head>
+  <body>
+    <h1 class="heading">🎊 천하제일 밈생대회 🎊</h1>
+    <!-- will use classes for css / ids for js -->
+
+    <section class="main-contents">
+      <canvas class="canvas" id="jsCanvas"></canvas>
+      <div class="image-container" id="jsImgContainer">
+        <span class="description" id="jsSpan">여길 클릭해보쇼!</span>
+      </div>
+    </section>
+
+    <div class="controls">
+      <div class="controls__range">
+        <input
+          type="range"
+          id="jsRange"
+          min="0.1"
+          max="5.1"
+          value="2.5"
+          steps="0.5"
+        />
+      </div>
+      <div class="controls__btns">
+        <button id="jsMode">🪄</button>
+        <button id="jsSave">💾</button>
+      </div>
+      <div class="controls__colors" id="jsColors">
+        <div
+          class="controls__color jsColor"
+          style="background-color: rgb(14, 14, 19)"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: white"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: rgb(233, 66, 0)"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: rgb(255, 145, 0)"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: rgb(255, 238, 0)"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: rgb(37, 235, 103)"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: rgb(74, 204, 255)"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: rgb(13, 120, 241)"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: rgb(84, 40, 206)"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: rgb(230, 76, 209)"
+        ></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="img.js"></script>
+  </body>
+</html>
