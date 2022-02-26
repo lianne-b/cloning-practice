@@ -47,18 +47,6 @@ function onButtonClick(event, items) {
     displayItems(filtered);
 }
 
-
-// Make the items matching {key: value} invisible
-function updateItems(items, key, value) {
-    items.forEach(item => {
-        if (item.dataset[key] === value) {
-            item.classList.remove("invisible");
-        } else {
-            item.classList.add("invisible");
-        }
-    });
-}
-
 // main function
 loadItems()
 .then(items => {
