@@ -1,54 +1,68 @@
 "use strict";
 
-const arrayPants = Array.from(document.getElementsByClassName("pants"));
-const arraySkirt = Array.from(document.getElementsByClassName("skirt"));
-const arrayTshirt = Array.from(document.getElementsByClassName("tshirt"));
-const arrayYellow = Array.from(document.getElementsByClassName("yellow"));
-const arrayBlue = Array.from(document.getElementsByClassName("blue"));
-const arrayPink = Array.from(document.getElementsByClassName("pink"));
+// Data should be stored separately from codes (In this case: in the data folder, stored in JSON format)
 
-
-function filterBlue() {
-    arrayBlue.map(value => value.classList.remove("visible"));
-    arrayYellow.map(value => value.classList.add("visible"));
-    arrayPink.map(value=> value.classList.add("visible"));
+// Fetch the items from the JSON file
+function loadItems() {
+    return fetch("data/data.json") // fetch data
+    .then(response => response.json()) // convert data to json
+    .then(json => json.items); // return items from json
 }
 
-function filterYellow() {
-    arrayYellow.map(value => value.classList.remove("visible"));
-    arrayBlue.map(value => value.classList.add("visible"));
-    arrayPink.map(value=> value.classList.add("visible"));
+// Update the list with the given items into HTML
+function displayItems(items) {
+    const container = document.querySelector(".items");
+    container.innerHTML = items.map(item => creatHTMLString(item)).join("");
 }
 
-function filterPink() {
-    arrayPink.map(value => value.classList.remove("visible"));
-    arrayBlue.map(value => value.classList.add("visible"));
-    arrayYellow.map(value => value.classList.add("visible"));
+// Creat HTML list from the given data item
+function creatHTMLString(items) {
+    return `
+    <li class="item">
+        <img src="${items.image}" alt="${items.type}" class="item__thumbnail" />
+        <span class="item__description">${items.gender}, ${items.size}</span>
+    </li>
+    `;
+} 
+
+
+function setEventListeners(items) {
+    const logo = document.querySelector(".logo");
+    const buttons = document.querySelector(".buttons");
+    logo.addEventListener("click", () => displayItems(items));
+    buttons.addEventListener("click", event => onButtonClick(event, items));
 }
 
-function filterPants() {
-    arrayPants.map(value => value.classList.remove("visible"));
-    arraySkirt.map(value => value.classList.add("visible"));
-    arrayTshirt.map(value=> value.classList.add("visible"));
-}
+// Handle button click
+function onButtonClick(event, items) {
+    const dataset = event.target.dataset;
+    const key = dataset.key;
+    const value = dataset.value;
 
-function filterSkirt() {
-    arraySkirt.map(value => value.classList.remove("visible"));
-    arrayPants.map(value => value.classList.add("visible"));
-    arrayTshirt.map(value=> value.classList.add("visible"));
-}
+    if (key == null || value == null) {
+        return; // end the function when no data is inside
+    }
 
-function filterTshirt() {
-    arrayTshirt.map(value => value.classList.remove("visible"));
-    arrayPants.map(value => value.classList.add("visible"));
-    arraySkirt.map(value=> value.classList.add("visible"));
+    const filtered = items.filter(item => item[key] === value);
+    displayItems(filtered);
 }
 
 
-(document.querySelector(".category-c-b")).addEventListener("click", filterBlue);
-(document.querySelector(".category-c-y")).addEventListener("click", filterYellow);
-(document.querySelector(".category-c-p")).addEventListener("click", filterPink);
+// Make the items matching {key: value} invisible
+function updateItems(items, key, value) {
+    items.forEach(item => {
+        if (item.dataset[key] === value) {
+            item.classList.remove("invisible");
+        } else {
+            item.classList.add("invisible");
+        }
+    });
+}
 
-(document.querySelector(".category-t-p")).addEventListener("click", filterPants);
-(document.querySelector(".category-t-s")).addEventListener("click", filterSkirt);
-(document.querySelector(".category-t-t")).addEventListener("click", filterTshirt);
+// main function
+loadItems()
+.then(items => {
+    displayItems(items);
+    setEventListeners(items);
+})
+.catch(console.log);
